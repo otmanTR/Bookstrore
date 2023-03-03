@@ -7,7 +7,7 @@ export default function Navbar() {
         <h1>Bookstore</h1>
         <nav>
           <ul className="navContainer">
-            <li>
+            <li className="navItems">
               <Link to="/">Books</Link>
             </li>
             <li>

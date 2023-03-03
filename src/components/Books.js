@@ -11,7 +11,7 @@ export default function Books() {
       <div className="bookList">
         <h2> List of Books</h2>
         <ul>
-          <li>
+          <li className="bookItems">
             <p>{title}</p>
             <p>{author}</p>
             <button type="button" className="button key">Remove</button>

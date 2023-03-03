@@ -9,11 +9,6 @@
   display: flex;
 }
 
-li {
-  display: flex;
-  flex-direction: row;
-}
-
 p {
   margin: 10px 10px 10px 10px;
 }
@@ -29,13 +24,21 @@ form {
 .button {
   margin-left: 10px;
   border-radius: 10ch;
+  width: 100px;
 }
 
 .navContainer {
- display: flex;
- flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-li {
+.navItems {
   margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bookItems {
+  display: flex;
+  flex-direction: column;
 }
