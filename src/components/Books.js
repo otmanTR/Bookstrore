@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Form from './Form';
 
 export default function Books() {
   const [bookList] = useState({ title: 'Transformation', author: 'Franz Kafka     ' });
@@ -17,12 +18,7 @@ export default function Books() {
           </li>
         </ul>
       </div>
-      <form>
-        <h3>Adding a Book</h3>
-        <input placeholder="title" />
-        <input placeholder="author" />
-      </form>
-
+      <Form />
     </>
   );
 }
