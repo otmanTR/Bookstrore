@@ -30,3 +30,12 @@ form {
   margin-left: 10px;
   border-radius: 10ch;
 }
+
+.navContainer {
+ display: flex;
+ flex-direction: row;
+}
+
+li {
+  margin-right: 50px;
+}
