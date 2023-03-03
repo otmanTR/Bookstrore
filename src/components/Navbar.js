@@ -1,11 +1,10 @@
-import {
-    Routes, Route, Link,
-  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
-    return (
-        <>
-        <div className="app">
-          <h1>Bookstore</h1>
+  return (
+    <>
+      <div className="app">
+        <h1>Bookstore</h1>
         <nav>
           <ul className="navContainer">
             <li>
@@ -16,7 +15,7 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
-        </div>
-        </>
-    );
+      </div>
+    </>
+  );
 }
