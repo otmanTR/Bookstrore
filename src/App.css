@@ -1,0 +1,44 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 30px 10px 30px;
+}
+
+.flex {
+  display: flex;
+}
+
+p {
+  margin: 10px 10px 10px 10px;
+}
+
+form {
+  margin: 10px 10px 10px 10px;
+}
+
+.bookList {
+  margin: 10px 10px 10px 10px;
+}
+
+.button {
+  margin-left: 10px;
+  border-radius: 10ch;
+  width: 100px;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.navItems {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bookItems {
+  display: flex;
+  flex-direction: column;
+}
