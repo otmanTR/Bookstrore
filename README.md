@@ -39,6 +39,7 @@
     <li>GitHub</li>
     <li>Jest</li>
     <li>React</li>
+    <li>Redux</li>
   </ul>
 ### Tech Stack <a name="tech-stack"></a>
 
