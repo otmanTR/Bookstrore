@@ -7,7 +7,7 @@ const initialState = {
 export const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducer: {
+  reducers: {
     addBook: (state, action) => {
       state.bookList.push(action.payload);
     },
