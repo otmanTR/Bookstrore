@@ -3,7 +3,7 @@ import { checkStatus } from '../redux/categories/categoriesSlice';
 
 export default function Categories() {
   const dispactch = useDispatch();
-  const { categories } = useSelector((store) => store.categories);
+  const { categories } = useSelector((state) => state.categories);
   const clickCheckStatus = () => {
     dispactch(checkStatus());
   };
