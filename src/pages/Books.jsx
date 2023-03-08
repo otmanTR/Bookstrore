@@ -8,11 +8,13 @@ export default function Books() {
   return (
     <>
       <div>
-        {bookList.map((item) => (
+        {bookList.map((book) => (
           <Book
-            key={item.itemId}
-            title={item.title}
-            author={item.author}
+            key={book.item_id}
+            id={book.item_id}
+            title={book.title}
+            author={book.author}
+            category={book.category}
           />
         ))}
 

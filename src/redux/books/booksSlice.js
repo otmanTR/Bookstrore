@@ -12,9 +12,10 @@ export const booksSlice = createSlice({
     addBook: (state, action) => {
       state.bookList.push(action.payload);
     },
-    removeBook: (state, action) => {
-      state.bookList.splice(action.payload);
-    },
+    removeBook: (state, action) => ({
+      ...state,
+      bookList: state.bookList.filter((book) => book.item_id !== action.payload),
+    }),
   },
 });
 
