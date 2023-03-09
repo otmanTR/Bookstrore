@@ -1,10 +1,22 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
 import Form from '../components/Form';
+import { getBooks } from '../redux/books/booksSlice';
 
 export default function Books() {
-  const { bookList } = useSelector((state) => state.books);
+  const { bookList, isLoading } = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (isLoading === true) {
+      dispatch(getBooks());
+    }
+    if (isLoading === false) {
+      dispatch(getBooks());
+    }
+  }, [isLoading, dispatch]);
+
   return (
     <>
       <div>

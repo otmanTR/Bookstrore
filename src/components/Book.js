@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 
 export default function Book({
-  id, title, author, category,
+  item_id: id, title, author, category,
 }) {
   const dispatch = useDispatch();
   return (
@@ -30,7 +30,7 @@ export default function Book({
   );
 }
 Book.propTypes = {
-  id: PropTypes.string.isRequired,
+  item_id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
