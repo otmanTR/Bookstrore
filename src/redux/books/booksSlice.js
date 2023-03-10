@@ -21,6 +21,15 @@ export const addBook = createAsyncThunk('books/addBook', async (newBook) => {
   }
 });
 
+export const removeBook = createAsyncThunk('books/removeBook', async (bookId) => {
+  try {
+    const response = await axios.delete(url + bookId);
+    return response.data;
+  } catch (error) {
+    return error.message;
+  }
+});
+
 const initialState = {
   bookList: [],
   status: 'idle',
@@ -31,13 +40,6 @@ const initialState = {
 export const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-
-    removeBook: (state, action) => ({
-      ...state,
-      bookList: state.bookList.filter((book) => book.item_id !== action.payload),
-    }),
-  },
   extraReducers(builder) {
     builder
       .addCase(getBooks.pending, (state) => ({
@@ -50,7 +52,7 @@ export const booksSlice = createSlice({
         keys.forEach((key) => {
           newArray.push(Object.assign({ id: key }, ...payload[key]));
         });
-        state.books = [...newArray];
+        state.bookList = [...newArray];
         state.status = 'loaded';
       })
       .addCase(getBooks.rejected, (state, action) => ({
@@ -62,9 +64,13 @@ export const booksSlice = createSlice({
         ...state,
         status: 'succeded',
         newStatus: payload,
+      }))
+      .addCase(removeBook.fulfilled, (state, { payload }) => ({
+        ...state,
+        status: 'succeded',
+        newStatus: payload,
       }));
   },
 });
 
-export const { removeBook } = booksSlice.actions;
 export default booksSlice.reducer;

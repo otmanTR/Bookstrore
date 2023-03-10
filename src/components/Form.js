@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, getBooks } from '../redux/books/booksSlice';
 
 export default function Form() {
   const dispatch = useDispatch();
@@ -18,6 +18,7 @@ export default function Form() {
         category: 'science',
       },
     ));
+    dispatch(getBooks());
   };
   return (
     <>
