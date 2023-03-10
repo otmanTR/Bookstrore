@@ -5,17 +5,17 @@ import Form from '../components/Form';
 import { getBooks } from '../redux/books/booksSlice';
 
 export default function Books() {
-  const { bookList, isLoading } = useSelector((state) => state.books);
+  const { bookList, status } = useSelector((store) => store.books);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (isLoading === true) {
+    if (status === 'emty') {
       dispatch(getBooks());
     }
-    if (isLoading === false) {
+    if (status === 'succeed') {
       dispatch(getBooks());
     }
-  }, [isLoading, dispatch]);
+  }, [status, dispatch]);
 
   return (
     <>
