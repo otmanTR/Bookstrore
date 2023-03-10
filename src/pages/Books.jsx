@@ -1,17 +1,28 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
 import Form from '../components/Form';
+import { getBooks } from '../redux/books/booksSlice';
 
 export default function Books() {
-  const { bookList } = useSelector((state) => state.books);
+  const { bookList, status } = useSelector((store) => store.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(getBooks());
+    }
+    if (status === 'succeed') {
+      dispatch(getBooks());
+    }
+  }, [status, dispatch]);
   return (
     <>
       <div>
         {bookList.map((book) => (
           <Book
-            key={book.item_id}
-            id={book.item_id}
+            key={book.id}
+            id={book.id}
             title={book.title}
             author={book.author}
             category={book.category}
