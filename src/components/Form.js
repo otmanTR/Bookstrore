@@ -15,6 +15,7 @@ export default function Form() {
         item_id: uniqid(),
         title: newTitle,
         author: newAuthor,
+        category: 'science',
       },
     ));
   };

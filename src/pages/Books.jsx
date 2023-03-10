@@ -9,7 +9,7 @@ export default function Books() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (status === 'emty') {
+    if (status === 'idle') {
       dispatch(getBooks());
     }
     if (status === 'succeed') {
