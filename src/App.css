@@ -1,12 +1,17 @@
+body {
+  background-color: ghostwhite;
+}
+
 .app {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 10px 30px 10px 30px;
-}
-
-.flex {
-  display: flex;
+  max-width: 87rem;
+  border-bottom: 1px solid #d3d3d3;
+  height: 5rem;
+  background-color: #fff;
+  align-items: center;
 }
 
 p {
@@ -14,31 +19,210 @@ p {
 }
 
 form {
-  margin: 10px 10px 10px 10px;
+  margin: 5px 10px 4rem 4rem;
+}
+
+h3 {
+  font-family: Montserrat, sans-serif;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.inputTitle {
+  width: 30rem;
+  height: 2rem;
+  margin: 1rem 2rem 0 0;
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  border: solid 1px #d3d3d3;
+  background-color: #fff;
+  outline: none;
+}
+
+.inputAuthor {
+  width: 17rem;
+  height: 2rem;
+  margin: 1rem 2rem 0;
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  border: solid 1px #d3d3d3;
+  background-color: #fff;
+  outline: none;
+}
+
+.submitButton {
+  width: 11rem;
+  height: 3rem;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-family: Roboto Slab, sans-serif;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .bookList {
   margin: 10px 10px 10px 10px;
 }
 
-.button {
-  margin-left: 10px;
-  border-radius: 10ch;
-  width: 100px;
-}
-
 .navContainer {
   display: flex;
   flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  list-style: none;
 }
 
-.navItems {
-  margin-right: 50px;
-  display: flex;
-  flex-direction: row;
+.navHeader {
+  width: 15rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.navBooks {
+  height: 1rem;
+  font-family: Montserrat, sans-serif;
+  margin: 0 10px 0 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navCategories {
+  width: 3rem;
+  margin: 0 10px 0 10px;
+  height: 1rem;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.icon-container {
+  border: 0.5px solid rgba(168, 168, 168, 0.667);
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin-left: 500px;
+}
+
+.mask-icon {
+  padding: 12px;
+  color: blue;
 }
 
 .bookItems {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.bookContainer {
+  margin: 0 4rem;
+  margin-top: 2rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  max-width: 70rem;
+  height: 12rem;
+  padding: 2rem 5rem 1rem 1rem;
+}
+
+.category {
+  margin-left: 1rem;
+  width: 3rem;
+  height: 1rem;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  color: #121212;
+}
+
+.title {
+  height: 1rem;
+  font-family: Roboto Slab, sans-serif;
+  font-size: 1rem;
+  color: #121212;
+  margin-left: 1rem;
+}
+
+.author {
+  height: 1rem;
+  font-family: Roboto Slab, sans-serif;
+  color: #4386bf;
+  margin-left: 1rem;
+}
+
+.complated {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  border: 5px solid #0290ff;
+  border-left: 5px solid #d3d3d3;
+  border-radius: 45px;
+}
+
+.buttonContainer {
+  display: flex;
+  list-style: none;
+  margin-top: 1.2rem;
+}
+
+.button {
+  width: 100px;
+  align-items: center;
+  border: none;
+  text-transform: capitalize;
+  background: transparent;
+  font-family: Roboto Slab, sans-serif;
+  color: #4386bf;
+}
+
+.border {
+  height: 5rem;
+  border: 1px solid #d3d3d3;
+  margin-top: 40px;
+}
+
+.borderButton {
+  height: 2rem;
+  border: 1px solid #d3d3d3;
+}
+
+.chapterContainer {
+  margin-top: 20px;
+}
+
+.cChapter {
+  opacity: 0.5;
+  font-family: Roboto Slab, sans-serif;
+  font-weight: 300;
+  color: #121212;
+  text-transform: uppercase;
+}
+
+.updateButton {
+  width: 15rem;
+  height: 2.5rem;
+  margin-top: 0.75rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-family: Roboto Slab, sans-serif;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
 }
