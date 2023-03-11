@@ -13,22 +13,42 @@ export default function Book({
   };
   return (
     <>
-      <div className="bookList">
-        <h2> List of Books</h2>
-        <ul>
-          <li className="bookItems">
-            <p>
-              {title}
-            </p>
-            <p>
-              {author}
-            </p>
-            <p>
-              {category}
-            </p>
-            <button type="button" className="button key" onClick={() => deleteReload()}>Remove</button>
-          </li>
-        </ul>
+      <div className="bookContainer">
+        <div className="bookList">
+          <ul>
+            <li className="bookItems">
+              <p className="category">
+                {category}
+              </p>
+              <p className="title">
+                {title}
+              </p>
+              <p className="author">
+                {author}
+              </p>
+              <div className="buttonContainer">
+                <button type="button" className="button key">Comments</button>
+                <div className="borderButton" />
+                <button type="button" className="button key" onClick={() => deleteReload()}>Remove</button>
+                <div className="borderButton" />
+                <button type="button" className="button key">Edit</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="complated">
+          <div className="icon" />
+          <div className="info">
+            <p>75%</p>
+            <p>Complated</p>
+          </div>
+        </div>
+        <div className="border" />
+        <div className="chapterContainer">
+          <p className="cChapter">CURRENT CHAPTER</p>
+          <p className="chapter">Chapter 17</p>
+          <button type="button" className="updateButton">UPDATE PROGRESS</button>
+        </div>
       </div>
     </>
   );

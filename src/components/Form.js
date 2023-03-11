@@ -23,10 +23,10 @@ export default function Form() {
   return (
     <>
       <form>
-        <h3>Adding a Book</h3>
-        <input type="text" placeholder="title" required onChange={(e) => setNewTitle(e.target.value)} />
-        <input type="text" placeholder="author" required onChange={(e) => setNewAuthor(e.target.value)} />
-        <button type="submit" onClick={clickAddBook}>Add Book</button>
+        <h3>Add NEW BOOK</h3>
+        <input className="inputTitle" type="text" placeholder="title" required onChange={(e) => setNewTitle(e.target.value)} />
+        <input className="inputAuthor" type="text" placeholder="author" required onChange={(e) => setNewAuthor(e.target.value)} />
+        <button className="submitButton" type="submit" onClick={clickAddBook}>Add Book</button>
       </form>
     </>
   );
